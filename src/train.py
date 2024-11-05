@@ -42,25 +42,25 @@ class TrainState(NamedTuple):
   """Container for the training state."""
   params: hk.Params
   opt_state: optax.OptState
-  rng: jnp.DeviceArray
-  step: jnp.DeviceArray
+  rng: jnp.array
+  step: jnp.array
 
 
 class TestState(NamedTuple):
   """Container for the test state."""
-  prediction: jnp.DeviceArray
-  inter_losses: jnp.DeviceArray
-  test_loss: jnp.DeviceArray
-  rng: jnp.DeviceArray
-  step: jnp.DeviceArray
+  prediction: jnp.array
+  inter_losses: jnp.array
+  test_loss: jnp.array
+  rng: jnp.array
+  step: jnp.array
 
 
 class DataState(NamedTuple):
   """Container for the data state."""
-  train_data: jnp.DeviceArray
-  test_data: jnp.DeviceArray
-  rng: jnp.DeviceArray
-  step: jnp.DeviceArray
+  train_data: jnp.array
+  test_data: jnp.array
+  rng: jnp.array
+  step: jnp.array
 
 _Metrics = MutableMapping[str, Any]
 
